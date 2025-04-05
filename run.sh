@@ -275,7 +275,7 @@ main() {
     configure_nginx
     
     echo -e "${green}=== 安装完成 ===${plain}"
-    echo -e "x-ui管理面板: ${yellow}http://${DOMAIN}/:${XUI_PORT}"
+    echo -e "x-ui管理面板: ${yellow}http://${DOMAIN}:${XUI_PORT}"
     echo -e "用户名: ${yellow}${XUI_USER}${plain}"
     echo -e "密码: ${yellow}${XUI_PASSWORD}${plain}"
     echo -e ""
