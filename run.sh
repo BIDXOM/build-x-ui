@@ -91,10 +91,10 @@ fi
 install_base() {
     echo -e "${green}正在安装必要工具...${plain}"
     if [[ x"${release}" == x"centos" ]]; then
-        yum install -y wget curl tar lrzsz nginx
+        yum install -y wget curl tar nginx
     else
         apt update -y
-        apt install -y wget curl tar lrzsz nginx
+        apt install -y wget curl tar nginx
     fi
 }
 
@@ -275,7 +275,7 @@ main() {
     configure_nginx
     
     echo -e "${green}=== 安装完成 ===${plain}"
-    echo -e "x-ui管理面板: ${yellow}https://${DOMAIN}/xui${plain}"
+    echo -e "x-ui管理面板: ${yellow}http://${DOMAIN}/:${XUI_PORT}"
     echo -e "用户名: ${yellow}${XUI_USER}${plain}"
     echo -e "密码: ${yellow}${XUI_PASSWORD}${plain}"
     echo -e ""
